@@ -51,10 +51,10 @@ fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        //const meals = data.meals;
-        //displayMeals(meals || []); // Handle the case when no meals are found
+        const meals = data.meals;
+        displayMeals(meals || []); // Handle the case when no meals are found
     })
     .catch(error => {
         console.error("Error fetching data", error);
-       // mealContainer.innerHTML = "An error occurred while fetching data.";
+        mealContainer.innerHTML = "An error occurred while fetching data.";
     });
